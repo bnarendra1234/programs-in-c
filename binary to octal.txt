@@ -1,0 +1,22 @@
+#include<stdio.h>
+int main()
+{
+    int n,i=0,r,j=1,decimal=0,octal=0;
+    scanf("%d",&n);
+    while(n>0)
+    {
+        r=n%10;
+        decimal=decimal+r*pow(2,i);
+        i++;
+        n=n/10;
+    }
+    while(decimal>0)
+    {
+        r=decimal%8;
+        octal=octal+r*j;
+        j=j*10;
+        decimal=decimal/8;
+        
+    }
+    printf("%d",octal);
+}
